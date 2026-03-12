@@ -74,16 +74,20 @@ The result shows that the amplifier is stable with adequate gain and bandwidth f
 
 # Slew Rate Measurement
 
-Transient analysis was carried out to analyze the large signal response of the amplifier.
+Transient simulation was performed to evaluate the large-signal response of the operational amplifier.
+The slew rate represents the **maximum rate of change of the output voltage** and is defined as:
 
-The slew rate is given by:
-SR = dVout / dt
+SR = dVout/dt
+A step input was applied to the non-inverting input using a pulse source while grounding the other input. The output waveform was then analyzed to determine the steepest slope of the voltage transition.
 
-Slew rate:
-~20 V/µs
-
-This is consistent with the calculated slew rate:
+Measured slew rate:
+~3.4 V/µs**
+This value is consistent with the theoretical relationship:
 SR ≈ I / Cc
+where:
+I = bias current available to charge the compensation capacitor  
+Cc = Miller compensation capacitor
+The measured result reflects the current-limited charging and discharging of the compensation capacitor in the second gain stage.
 
 ## Simulation Tools
 
